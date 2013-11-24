@@ -1,18 +1,23 @@
-puts 'Please enter your first number'
-num1 = gets.chomp
-puts 'Please enter your second number'
-num2 = gets.chomp
+class Calculator
+  def initialize(first_number, second_number)
+    @first_number = first_number
+    @second_number = second_number
+  end
 
-puts 'What operation would you like to perform on them: 1.addition, 2.subtraction, 3.division, 4.multiplication'
-operation = gets.chomp
+  def add
+    @first_number + @second_number
+  end
 
-if operation == '1'
- result = num1.to_i + num2.to_i
-elsif operation == '2'
-	result = num1.to_i - num2.to_i
-elsif operation == '3'
-	result = num1.to_i / num2.to_i
-elsif operation == '4'
-	result = num1.to_i * num2.to_i
+  def subtract
+    @first_number - @second_number
+  end
+
+  def multiply
+    @first_number * @second_number
+  end
+
+  def divide
+    @first_number / @second_number
+  end
 end
-puts 'result is ' + result.to_s
+
